@@ -1,6 +1,6 @@
-import SocialProofHeading from "@/app/_sections/social-proof/_components/heading";
-import CompanyLogos from "@/app/_sections/social-proof/_components/logos";
-import SocialProofStats from "@/app/_sections/social-proof/_components/stats";
+import SocialProofHeading from "@/app/(sections)/social-proof/_components/heading";
+import CompanyLogos from "@/app/(sections)/social-proof/_components/logos";
+import SocialProofStats from "@/app/(sections)/social-proof/_components/stats";
 import { Variants } from "motion";
 
 export default function SocialProof() {

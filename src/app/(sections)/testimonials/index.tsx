@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import TestimonialCard from "@/app/_sections/testimonials/_components/testimonialCard";
+import TestimonialCard from "@/app/(sections)/testimonials/_components/testimonialCard";
 import testimonials from "@/constants/dummy-data/testimonials";
 
 export default function Testimonials() {

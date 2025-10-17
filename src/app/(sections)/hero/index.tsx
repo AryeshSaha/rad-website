@@ -1,6 +1,6 @@
-import BgOrb from "@/app/_sections/hero/_components/bgOrb";
-import LeftContent from "@/app/_sections/hero/_components/leftContent";
-import RightImage from "@/app/_sections/hero/_components/rightImage";
+import BgOrb from "@/app/(sections)/hero/_components/bgOrb";
+import LeftContent from "@/app/(sections)/hero/_components/leftContent";
+import RightImage from "@/app/(sections)/hero/_components/rightImage";
 
 export default function Hero() {
   return (
