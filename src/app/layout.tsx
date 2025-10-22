@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/themeProvider";
 import ModernHeader from "@/components/header";
 import ModernFooter from "@/components/footer";
+import ScrollToHash from "@/components/scrollToHash";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,7 +34,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <ModernHeader />
-          <main>{children}</main>
+          <main>
+            <ScrollToHash />
+            {children}
+          </main>
           <ModernFooter />
         </ThemeProvider>
       </body>

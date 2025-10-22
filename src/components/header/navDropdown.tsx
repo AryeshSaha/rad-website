@@ -67,16 +67,10 @@ export default function NavDropdown({
 
   const handleMouseLeave = () => {
     if (isMobile) return;
-
-    // Clear any existing timeout
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
-
-    // Set a small delay before closing to allow movement to another dropdown
     timeoutRef.current = setTimeout(() => {
-      // Only close if we're the currently active dropdown
-      // This prevents closing a newly opened dropdown
       if (activeDropdown === id) {
         setActiveDropdown(null);
       }
@@ -103,7 +97,7 @@ export default function NavDropdown({
           "absolute top-full left-0 mt-1 w-64 bg-black/90 border border-white/10 rounded-xl overflow-hidden backdrop-blur-xl shadow-xl p-3 animate-fadeIn z-10",
         item: "flex items-center px-4 py-2.5 hover:bg-white/10 rounded-lg transition-colors",
       };
-
+  const firstItem = items[0];
   return (
     <div
       className={cn(mobileStyles.wrapper, className)}
@@ -128,13 +122,93 @@ export default function NavDropdown({
         />
       </button>
 
-      {isOpen && (
-        <div ref={dropdownRef} className={mobileStyles.content}>
-          {items.map(({ key, name, href }) => (
-            <Link key={key} href={href} className={mobileStyles.item}>
-              <span className={cn("font-medium", "text-sm")}>{name}</span>
-            </Link>
+      {isOpen && isMobile && (
+        <div className="pl-2 mt-2 space-y-4 animate-in fade-in duration-200">
+          {items.map((column) => (
+            <div key={column.key}>
+              <div className="flex items-center gap-2 mb-2 text-primary font-semibold text-sm">
+                {column.icon && <column.icon className="h-4 w-4" />}
+                <span>{column.name}</span>
+              </div>
+              <div className="space-y-1">
+                {column.items.map((item) => (
+                  <Link
+                    key={item.key}
+                    href={item.href}
+                    className="flex items-center gap-2 py-1.5 px-3 text-muted-foreground hover:text-foreground hover:bg-accent rounded-lg transition-colors"
+                  >
+                    {item.icon && (
+                      <item.icon className="h-4 w-4 flex-shrink-0" />
+                    )}
+                    <span className="text-sm">{item.name}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
           ))}
+        </div>
+      )}
+      {isOpen && !isMobile && (
+        <div
+          ref={dropdownRef}
+          className="absolute top-full left-1/2 -translate-x-1/2 mt-2 
+      bg-popover border border-border rounded-xl shadow-elegant 
+      backdrop-blur-xl animate-in fade-in slide-in-from-top-2 
+      duration-200 z-50 w-[80vw] max-w-6xl p-4"
+        >
+          <div className="flex gap-2 w-full">
+            <div className="flex-1 space-y-3">
+              <div className="flex items-center gap-2 text-amber-500 font-semibold text-sm uppercase tracking-wide pb-2 border-b border-border/50">
+                {firstItem.icon && <firstItem.icon className="h-5 w-5" />}
+                <span>{firstItem.name}</span>
+              </div>
+              <div className="space-y-1">
+                {firstItem.items.map((item) => (
+                  <Link
+                    key={item.key}
+                    href={item.href}
+                    className="flex items-center gap-2 px-3 py-2 text-muted-foreground hover:text-foreground hover:bg-accent rounded-lg transition-all duration-200 group"
+                  >
+                    {item.icon && (
+                      <item.icon className="h-4 w-4 flex-shrink-0 text-muted-foreground/60 group-hover:text-red-400 transition-colors" />
+                    )}
+                    <span className="text-sm group-hover:text-red-400 transition-colors">
+                      {item.name}
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+            <div className="flex-[2] flex flex-wrap gap-4">
+              {items.slice(1).map((column) => (
+                <div
+                  key={column.key}
+                  className="min-w-[12rem] flex-1 space-y-3"
+                >
+                  <div className="flex items-center gap-2 text-amber-500 font-semibold text-sm uppercase tracking-wide pb-2 border-b border-border/50">
+                    {column.icon && <column.icon className="h-5 w-5" />}
+                    <span>{column.name}</span>
+                  </div>
+                  <div className="space-y-1">
+                    {column.items.map((item) => (
+                      <Link
+                        key={item.key}
+                        href={item.href}
+                        className="flex items-center gap-2 px-3 py-2 text-muted-foreground hover:text-foreground hover:bg-accent rounded-lg transition-all duration-200 group"
+                      >
+                        {item.icon && (
+                          <item.icon className="h-4 w-4 flex-shrink-0 text-muted-foreground/60 group-hover:text-red-400 transition-colors" />
+                        )}
+                        <span className="text-sm group-hover:text-red-400 transition-colors">
+                          {item.name}
+                        </span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       )}
     </div>

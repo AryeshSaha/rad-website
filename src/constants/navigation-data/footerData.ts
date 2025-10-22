@@ -1,7 +1,10 @@
 import { USER_ROUTES } from "@/constants/navigation-data/URLs";
-import { NavType } from "@/types/dataTypes";
 
-export const footerData: NavType[] = [
+export const footerData: {
+  key: string;
+  label: string;
+  items: { key: string; name: string; href: string }[];
+}[] = [
   {
     key: "solutions",
     label: "Solutions",
@@ -35,17 +38,17 @@ export const footerData: NavType[] = [
       {
         key: "about",
         name: "About",
-        href: "/",
+        href: USER_ROUTES.ABOUT,
       },
       {
-        key: "team",
-        name: "Our Team",
-        href: "/",
+        key: "blogs",
+        name: "Blogs",
+        href: USER_ROUTES.BLOGS,
       },
       {
         key: "work",
         name: "Our Work",
-        href: "/",
+        href: USER_ROUTES.PORTFOLIO,
       },
       {
         key: "contact",

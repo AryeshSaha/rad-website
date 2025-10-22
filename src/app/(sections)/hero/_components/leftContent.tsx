@@ -2,8 +2,10 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, Star } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { USER_ROUTES } from "@/constants/navigation-data/URLs";
 
 const LeftContent = () => {
   return (
@@ -34,10 +36,11 @@ const LeftContent = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="text-base sm:text-lg lg:text-xl text-white/70 mb-6 sm:mb-8 max-w-xl mx-auto lg:mx-0"
+        className="text-base sm:text-lg lg:text-xl text-white/70 mb-8 sm:mb-16 max-w-xl mx-auto lg:mx-0"
       >
-        Transform how you work with our AI-powered platform. Automate workflows,
-        gain insights, and boost productivity.
+        Grow smarter with RAD Media Solutions — your AI-powered partner for
+        digital marketing, SEO, web design, and automation that drives real
+        results.
       </motion.p>
 
       <motion.div
@@ -46,49 +49,23 @@ const LeftContent = () => {
         transition={{ duration: 0.5, delay: 0.3 }}
         className="flex flex-col max-w-[80%] mx-auto sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start"
       >
-        <Button
-          variant="myTheme"
-          className="h-10 sm:h-12 px-6 sm:px-8 text-sm sm:text-base"
-        >
-          Start Free Trial
-          <ArrowRight className="ml-2 h-3.5 w-3.5 sm:h-4 sm:w-4" />
-        </Button>
-        <Button
-          variant="outline"
-          className="border-white/20 text-white hover:bg-white/10 h-10 sm:h-12 px-6 sm:px-8 text-sm sm:text-base"
-        >
-          Watch Demo
-        </Button>
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.4 }}
-        className="mt-6 sm:mt-8 flex items-center justify-center lg:justify-start gap-2 sm:gap-4 flex-wrap sm:flex-nowrap"
-      >
-        <div className="flex -space-x-2">
-          {[1, 2, 3, 4].map((i) => (
-            <div
-              key={i}
-              className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 border-black bg-gray-800 flex items-center justify-center text-xs"
-            >
-              {i}
-            </div>
-          ))}
-        </div>
-        <div className="text-xs sm:text-sm">
-          <span className="text-white/70">Trusted by</span>{" "}
-          <span className="font-bold">10,000+</span>{" "}
-          <span className="text-white/70">companies</span>
-        </div>
-        <div className="flex items-center gap-0.5 sm:gap-1">
-          <Star className="h-3 w-3 sm:h-4 sm:w-4 fill-amber-400 text-amber-400" />
-          <Star className="h-3 w-3 sm:h-4 sm:w-4 fill-amber-400 text-amber-400" />
-          <Star className="h-3 w-3 sm:h-4 sm:w-4 fill-amber-400 text-amber-400" />
-          <Star className="h-3 w-3 sm:h-4 sm:w-4 fill-amber-400 text-amber-400" />
-          <Star className="h-3 w-3 sm:h-4 sm:w-4 fill-amber-400 text-amber-400" />
-        </div>
+        <Link href={USER_ROUTES.CONTACT}>
+          <Button
+            variant="myTheme"
+            className="h-10 sm:h-12 px-6 sm:px-8 text-sm sm:text-base"
+          >
+            Get Quote
+            <ArrowRight className="ml-2 h-3.5 w-3.5 sm:h-4 sm:w-4" />
+          </Button>
+        </Link>
+        <Link href={USER_ROUTES.FAQS}>
+          <Button
+            variant="outline"
+            className="border-white/20 text-white hover:bg-white/10 h-10 sm:h-12 px-6 sm:px-8 text-sm sm:text-base"
+          >
+            Learn More
+          </Button>
+        </Link>
       </motion.div>
     </div>
   );

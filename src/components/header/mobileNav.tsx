@@ -15,7 +15,9 @@ export default function MobileNav({ isOpen }: { isOpen: boolean }) {
     <div
       className={cn(
         "md:hidden fixed inset-x-0 top-[60px] bg-black/95 backdrop-blur-lg border-t border-white/10 transition-all duration-300 overflow-hidden",
-        isOpen ? "max-h-[calc(100vh-60px)] opacity-100" : "max-h-0 opacity-0"
+        isOpen
+          ? "h-[calc(100vh-60px)] opacity-100 overflow-y-auto"
+          : "h-0 opacity-0 overflow-hidden"
       )}
     >
       <div
@@ -34,6 +36,7 @@ export default function MobileNav({ isOpen }: { isOpen: boolean }) {
               items={item.items || []}
               activeDropdown={activeDropdown}
               setActiveDropdown={setActiveDropdown}
+              isMobile
             />
           ) : (
             item.href && (

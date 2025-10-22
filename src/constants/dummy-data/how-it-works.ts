@@ -1,30 +1,30 @@
 const steps = [
   {
     number: "01",
-    title: "Sign Up",
+    title: "Understand & Strategize",
     description:
-      "Create your account in seconds. No credit card required for the free trial.",
+      "We start by deeply understanding your business objectives, target audience, and market potential.",
     image: "/images/hero.avif",
   },
   {
     number: "02",
-    title: "Integrate",
+    title: "Create & Innovate",
     description:
-      "Connect your existing tools and services with our one-click integrations.",
+      "Our creative and technical teams craft tailored strategies and design solutions that align with your goals.",
     image: "/images/hero.avif",
   },
   {
     number: "03",
-    title: "Customize",
+    title: "Execute & Optimize",
     description:
-      "Configure your workspace and workflows to match your unique business needs.",
+      "Using performance data and AI insights, we continuously optimize campaigns for maximum ROI and efficiency.",
     image: "/images/hero.avif",
   },
   {
     number: "04",
-    title: "Launch",
+    title: "Measure & Grow",
     description:
-      "Go live with your optimized workflows and start seeing results immediately.",
+      "We track, analyze, and refine every step — ensuring consistent growth, stronger brand presence, and lasting impact.",
     image: "/images/hero.avif",
   },
 ];

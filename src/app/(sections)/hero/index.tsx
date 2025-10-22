@@ -1,6 +1,7 @@
 import BgOrb from "@/app/(sections)/hero/_components/bgOrb";
 import LeftContent from "@/app/(sections)/hero/_components/leftContent";
 import RightImage from "@/app/(sections)/hero/_components/rightImage";
+import Container from "@/components/ui/container";
 
 export default function Hero() {
   return (
@@ -8,12 +9,12 @@ export default function Hero() {
       {/* Background elements */}
       <BgOrb />
 
-      <div className="container mx-auto px-4 relative z-10">
+      <Container className="relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 py-8 sm:py-0">
           <LeftContent />
           <RightImage />
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

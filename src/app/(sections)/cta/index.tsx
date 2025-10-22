@@ -3,14 +3,15 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { USER_ROUTES } from "@/constants/navigation-data/URLs";
 
 export default function Cta() {
   return (
     <section className="py-16 pb-20 px-3 sm:px-0 sm:py-16 md:py-24 bg-black relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-radial from-red-500/20 via-transparent to-transparent opacity-30"></div>
-        <div className="absolute inset-0 bg-[url('/images/grid.svg')] bg-repeat opacity-10"></div>
+        <div className="absolute inset-0 bg-gradient-radial from-red-500/20 via-transparent to-transparent opacity-30" />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
@@ -28,22 +29,20 @@ export default function Cta() {
                 Ready to Transform Your Project?
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-white/70 mb-6 sm:mb-8 max-w-2xl mx-auto">
-                Join thousands of satisfied customers who are already using RAD&apos;s Solutions
-                to streamline their operations and boost productivity.
+                Join thousands of satisfied customers who are already using
+                RAD&apos;s Solutions to streamline their operations and boost
+                productivity.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="myTheme" className="sm:h-12 px-6 sm:px-8 text-sm sm:text-base">
+              <Link href={USER_ROUTES.CONTACT}>
+                <Button
+                  variant="myTheme"
+                  className="sm:h-12 px-6 sm:px-8 text-sm sm:text-base"
+                >
                   Get Quote
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
-                <Button
-                  variant="outline"
-                  className="border-white/20 text-white hover:bg-white/10 h-10 sm:h-12 px-6 sm:px-8 text-sm sm:text-base"
-                >
-                  Schedule Meeting
-                </Button>
-              </div>
+              </Link>
 
               <p className="mt-4 sm:mt-6 text-white/50 text-xs sm:text-sm">
                 No hidden charges. Full Transparency. Complete Maintenance.
