@@ -1,6 +1,6 @@
 "use client";
 
-import { useForm, SubmitHandler, Controller } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
@@ -13,6 +13,8 @@ import {
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { submitContactForm } from "@/app/actions";
+import { toast } from "sonner";
 
 const contactFormSchema = z.object({
   name: z
@@ -39,11 +41,21 @@ const ContactForm = () => {
     defaultValues,
   });
 
-  const onSubmit: SubmitHandler<ContactFormType> = async (data) => {
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    console.log(data);
-    form.reset();
-  };
+  async function onSubmit(values: ContactFormType) {
+    const formData = new FormData();
+    Object.entries(values).forEach(([key, value]) => {
+      formData.append(key, value?.toString() ?? "");
+    });
+
+    try {
+      await submitContactForm(formData);
+      toast.success("Form submitted successfully!");
+      form.reset();
+    } catch (err) {
+      toast.error("Error submitting contact form");
+      console.error("Error submitting contact form:", err);
+    }
+  }
 
   return (
     <div className="flex flex-col">

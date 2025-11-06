@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/themeProvider";
 import ModernHeader from "@/components/header";
 import ModernFooter from "@/components/footer";
 import ScrollToHash from "@/components/scrollToHash";
+import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,6 +38,7 @@ export default function RootLayout({
           <main>
             <ScrollToHash />
             {children}
+             <Toaster />
           </main>
           <ModernFooter />
         </ThemeProvider>
