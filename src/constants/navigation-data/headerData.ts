@@ -1,7 +1,14 @@
 import {
-  ROUTE_BUILDER,
+  CMS_ECOM_SOLUTIONS,
+  HIRING_SOLUTIONS,
+  INDUSTRIES_SOLUTIONS,
+  MARKETING_SOLUTIONS,
+  MOBILE_SOLUTIONS,
+  SOLUTION_ROUTE_BUILDER,
   SOLUTION_ROUTES,
   USER_ROUTES,
+  WEB_DESIGN_SOLUTIONS,
+  WEB_DEV_SOLUTIONS,
 } from "@/constants/navigation-data/URLs";
 import { NavType } from "@/types/dataTypes";
 import {
@@ -61,112 +68,101 @@ export const headerData: NavType[] = [
         icon: TrendingUp,
         items: [
           {
-            key: "seo",
+            key: MARKETING_SOLUTIONS.SEO,
             name: "Search Engine Optimization (SEO)",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.MARKETING,
-              "seo"
+              MARKETING_SOLUTIONS.SEO
             ),
             icon: Search,
           },
           {
-            key: "local-seo",
+            key: MARKETING_SOLUTIONS.LOCAL_SEO,
             name: "Local SEO Services",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.MARKETING,
-              "local-seo"
+              MARKETING_SOLUTIONS.LOCAL_SEO
             ),
             icon: MapPin,
           },
           {
-            key: "social-media",
+            key: MARKETING_SOLUTIONS.SOCIAL_MEDIA,
             name: "Social Media Marketing",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.MARKETING,
-              "social-media"
+              MARKETING_SOLUTIONS.SOCIAL_MEDIA
             ),
             icon: Share2,
           },
           {
-            key: "search-marketing",
+            key: MARKETING_SOLUTIONS.SEARCH_MARKETING,
             name: "Search Engine Marketing",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.MARKETING,
-              "search-marketing"
+              MARKETING_SOLUTIONS.SEARCH_MARKETING
             ),
             icon: DollarSign,
           },
           {
-            key: "voice-seo",
+            key: MARKETING_SOLUTIONS.VOICE_SEO,
             name: "Voice Search Optimization Services",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.MARKETING,
-              "voice-seo"
+              MARKETING_SOLUTIONS.VOICE_SEO
             ),
             icon: Mic,
           },
           {
-            key: "google-analytics",
+            key: MARKETING_SOLUTIONS.GOOGLE_ANALYTICS,
             name: "Google Analytics Services",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.MARKETING,
-              "google-analytics"
+              MARKETING_SOLUTIONS.GOOGLE_ANALYTICS
             ),
             icon: BarChart,
           },
           {
-            key: "online-reputation",
+            key: MARKETING_SOLUTIONS.ONLINE_REPUTATION,
             name: "Online Reputation Management",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.MARKETING,
-              "online-reputation"
+              MARKETING_SOLUTIONS.ONLINE_REPUTATION
             ),
             icon: Award,
           },
           {
-            key: "conversion-rate-optimization",
+            key: MARKETING_SOLUTIONS.CONVERSION_RATE_OPTIMIZATION,
             name: "Conversion Rate Optimization Agency",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.MARKETING,
-              "conversion-rate-optimization"
+              MARKETING_SOLUTIONS.CONVERSION_RATE_OPTIMIZATION
             ),
             icon: Tally5,
           },
           {
-            key: "email-marketing",
+            key: MARKETING_SOLUTIONS.EMAIL_MARKETING,
             name: "Email Marketing Services",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.MARKETING,
-              "email-marketing"
+              MARKETING_SOLUTIONS.EMAIL_MARKETING
             ),
             icon: Mail,
           },
           {
-            key: "technical-seo",
+            key: MARKETING_SOLUTIONS.TECHNICAL_SEO,
             name: "Technical SEO Services",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.MARKETING,
-              "technical-seo"
+              MARKETING_SOLUTIONS.TECHNICAL_SEO
             ),
             icon: Settings,
           },
           {
-            key: "content-writing",
+            key: MARKETING_SOLUTIONS.CONTENT_WRITING,
             name: "Content Writing Services",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.MARKETING,
-              "content-writing"
+              MARKETING_SOLUTIONS.CONTENT_WRITING
             ),
             icon: FileText,
           },
@@ -178,52 +174,47 @@ export const headerData: NavType[] = [
         icon: Layout,
         items: [
           {
-            key: "responsive",
+            key: WEB_DESIGN_SOLUTIONS.RESPONSIVE_DESIGN,
             name: "Responsive Website Design",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.WEB_DESIGN,
-              "responsive"
+              WEB_DESIGN_SOLUTIONS.RESPONSIVE_DESIGN
             ),
             icon: Monitor,
           },
           {
-            key: "custom",
+            key: WEB_DESIGN_SOLUTIONS.CUSTOM_WEBSITE_DESIGN,
             name: "Custom Website Design",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.WEB_DESIGN,
-              "custom"
+              WEB_DESIGN_SOLUTIONS.CUSTOM_WEBSITE_DESIGN
             ),
             icon: Palette,
           },
           {
-            key: "ecommerce-design",
+            key: WEB_DESIGN_SOLUTIONS.ECOMMERCE_DESIGN,
             name: "Ecommerce Website Design",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.WEB_DESIGN,
-              "ecommerce-design"
+              WEB_DESIGN_SOLUTIONS.ECOMMERCE_DESIGN
             ),
             icon: ShoppingCart,
           },
           {
-            key: "small-business",
+            key: WEB_DESIGN_SOLUTIONS.SMALL_BUSINESS_DESIGN,
             name: "Small Business Website Design",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.WEB_DESIGN,
-              "small-business"
+              WEB_DESIGN_SOLUTIONS.SMALL_BUSINESS_DESIGN
             ),
             icon: Building2,
           },
           {
-            key: "ui-ux",
+            key: WEB_DESIGN_SOLUTIONS.UI_UX_DESIGN,
             name: "UI / UX Design",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.WEB_DESIGN,
-              "ui-ux"
+              WEB_DESIGN_SOLUTIONS.UI_UX_DESIGN
             ),
             icon: PenTool,
           },
@@ -235,52 +226,47 @@ export const headerData: NavType[] = [
         icon: Code,
         items: [
           {
-            key: "node",
+            key: WEB_DEV_SOLUTIONS.NODEJS_DEVELOPMENT,
             name: "Node Development Services",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.WEB_DEV,
-              "node"
+              WEB_DEV_SOLUTIONS.NODEJS_DEVELOPMENT
             ),
             icon: Leaf,
           },
           {
-            key: "react",
+            key: WEB_DEV_SOLUTIONS.REACTJS_DEVELOPMENT,
             name: "React Development Services",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.WEB_DEV,
-              "react"
+              WEB_DEV_SOLUTIONS.REACTJS_DEVELOPMENT
             ),
             icon: Feather,
           },
           {
-            key: "jquery",
+            key: WEB_DEV_SOLUTIONS.JQUERY_DEVELOPMENT,
             name: "Jquery Development Services",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.WEB_DEV,
-              "jquery"
+              WEB_DEV_SOLUTIONS.JQUERY_DEVELOPMENT
             ),
             icon: Code,
           },
           {
-            key: "nextjs",
+            key: WEB_DEV_SOLUTIONS.NEXTJS_DEVELOPMENT,
             name: "NextJs Development",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.WEB_DEV,
-              "nextjs"
+              WEB_DEV_SOLUTIONS.NEXTJS_DEVELOPMENT
             ),
             icon: Code2,
           },
           {
-            key: "php",
+            key: WEB_DEV_SOLUTIONS.PHP_DEVELOPMENT,
             name: "Php Development Services",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.WEB_DEV,
-              "php"
+              WEB_DEV_SOLUTIONS.PHP_DEVELOPMENT
             ),
             icon: FileCode,
           },
@@ -292,52 +278,47 @@ export const headerData: NavType[] = [
         icon: Server,
         items: [
           {
-            key: "cms-ecommerce-dev",
+            key: CMS_ECOM_SOLUTIONS.CMS_ECOM_DEVELOPMENT,
             name: "CMS Ecommerce Development",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.CMS_ECOM,
-              "cms-ecommerce-dev"
+              CMS_ECOM_SOLUTIONS.CMS_ECOM_DEVELOPMENT
             ),
             icon: Store,
           },
           {
-            key: "drupal",
+            key: CMS_ECOM_SOLUTIONS.DRUPAL_DEVELOPMENT,
             name: "Drupal Development Services",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.CMS_ECOM,
-              "drupal"
+              CMS_ECOM_SOLUTIONS.DRUPAL_DEVELOPMENT
             ),
             icon: Zap,
           },
           {
-            key: "magento",
+            key: CMS_ECOM_SOLUTIONS.MAGENTO_DEVELOPMENT,
             name: "Magento Development Services",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.CMS_ECOM,
-              "magento"
+              CMS_ECOM_SOLUTIONS.MAGENTO_DEVELOPMENT
             ),
             icon: ShoppingBag,
           },
           {
-            key: "shopify",
+            key: CMS_ECOM_SOLUTIONS.SHOPIFY_DEVELOPMENT,
             name: "Shopify Development Services",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.CMS_ECOM,
-              "shopify"
+              CMS_ECOM_SOLUTIONS.SHOPIFY_DEVELOPMENT
             ),
             icon: CreditCard,
           },
           {
-            key: "wordpress",
+            key: CMS_ECOM_SOLUTIONS.WORDPRESS_DEVELOPMENT,
             name: "WordPress Development Services",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.CMS_ECOM,
-              "wordpress"
+              CMS_ECOM_SOLUTIONS.WORDPRESS_DEVELOPMENT
             ),
             icon: BookOpen,
           },
@@ -349,32 +330,29 @@ export const headerData: NavType[] = [
         icon: Smartphone,
         items: [
           {
-            key: "android",
+            key: MOBILE_SOLUTIONS.ANDROID_APP_DEVELOPMENT,
             name: "Android App Development",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.MOBILE,
-              "android"
+              MOBILE_SOLUTIONS.ANDROID_APP_DEVELOPMENT
             ),
             icon: Zap,
           },
           {
-            key: "ios",
-            name: "Ios App Development",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            key: MOBILE_SOLUTIONS.IOS_APP_DEVELOPMENT,
+            name: "iOS App Development",
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.MOBILE,
-              "ios"
+              MOBILE_SOLUTIONS.IOS_APP_DEVELOPMENT
             ),
             icon: Apple,
           },
           {
-            key: "hybrid",
+            key: MOBILE_SOLUTIONS.HYBRID_APP_DEVELOPMENT,
             name: "Hybrid App Development",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.MOBILE,
-              "hybrid"
+              MOBILE_SOLUTIONS.HYBRID_APP_DEVELOPMENT
             ),
             icon: Infinity,
           },
@@ -386,42 +364,38 @@ export const headerData: NavType[] = [
         icon: Factory,
         items: [
           {
-            key: "retail",
+            key: INDUSTRIES_SOLUTIONS.RETAIL,
             name: "Retail",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.INDUSTRIES,
-              "retail"
+              INDUSTRIES_SOLUTIONS.RETAIL
             ),
             icon: ShoppingCart,
           },
           {
-            key: "real-estate",
+            key: INDUSTRIES_SOLUTIONS.REAL_ESTATE,
             name: "Real Estate",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.INDUSTRIES,
-              "real-estate"
+              INDUSTRIES_SOLUTIONS.REAL_ESTATE
             ),
             icon: Home,
           },
           {
-            key: "business-process",
+            key: INDUSTRIES_SOLUTIONS.BUSINESS_PROCESS,
             name: "Business Process",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.INDUSTRIES,
-              "business-process"
+              INDUSTRIES_SOLUTIONS.BUSINESS_PROCESS
             ),
             icon: Briefcase,
           },
           {
-            key: "education",
+            key: INDUSTRIES_SOLUTIONS.EDUCATION,
             name: "Education",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.INDUSTRIES,
-              "education"
+              INDUSTRIES_SOLUTIONS.EDUCATION
             ),
             icon: Book,
           },
@@ -433,52 +407,47 @@ export const headerData: NavType[] = [
         icon: Users,
         items: [
           {
-            key: "hire-web-developer",
+            key: HIRING_SOLUTIONS.HIRE_WEB_DEVELOPERS,
             name: "Hire Web Developer",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.HIRING,
-              "hire-web-developer"
+              HIRING_SOLUTIONS.HIRE_WEB_DEVELOPERS
             ),
             icon: Code,
           },
           {
-            key: "hire-apps-developer",
+            key: HIRING_SOLUTIONS.HIRE_MOBILE_DEVELOPERS,
             name: "Hire Apps Developer",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.HIRING,
-              "hire-apps-developer"
+              HIRING_SOLUTIONS.HIRE_MOBILE_DEVELOPERS
             ),
             icon: Smartphone,
           },
           {
-            key: "hire-digital-expert",
+            key: HIRING_SOLUTIONS.HIRE_DIGITAL_MARKETING_EXPERT,
             name: "Hire Digital Marketing Expert",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.HIRING,
-              "hire-digital-expert"
+              HIRING_SOLUTIONS.HIRE_DIGITAL_MARKETING_EXPERT
             ),
             icon: TrendingUp,
           },
           {
-            key: "hire-web-designers",
+            key: HIRING_SOLUTIONS.HIRE_WEB_DESIGN,
             name: "Hire Web Designers",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.HIRING,
-              "hire-web-designers"
+              HIRING_SOLUTIONS.HIRE_WEB_DESIGN
             ),
             icon: Layout,
           },
           {
-            key: "hire-software-developer",
+            key: HIRING_SOLUTIONS.HIRE_SOFTWARE_DEVELOPERS,
             name: "Hire Software Developer",
-            href: ROUTE_BUILDER.USER(
-              USER_ROUTES.SOLUTIONS,
+            href: SOLUTION_ROUTE_BUILDER(
               SOLUTION_ROUTES.HIRING,
-              "hire-software-developer"
+              HIRING_SOLUTIONS.HIRE_SOFTWARE_DEVELOPERS
             ),
             icon: HardHat,
           },

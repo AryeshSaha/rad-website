@@ -1,7 +1,7 @@
 import HowItWorksCarousel from "@/app/(sections)/how-it-works/_components/carousel";
 import HowItWorksHeading from "@/app/(sections)/how-it-works/_components/heading";
 import HowItWorksCard from "@/app/(sections)/how-it-works/_components/howItWorksCard";
-import steps from "@/constants/dummy-data/how-it-works";
+import steps from "@/constants/data/pageData/how-it-works";
 
 export default function HowItWorks() {
   return (

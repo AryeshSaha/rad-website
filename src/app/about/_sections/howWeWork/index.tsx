@@ -2,7 +2,7 @@
 
 import Container from "@/components/ui/container";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
-import { howWeWorkData } from "@/constants/dummy-data/how-we-work";
+import { howWeWorkData } from "@/constants/data/pageData/how-we-work";
 import { motion } from "framer-motion";
 
 export default function HowWeWork() {

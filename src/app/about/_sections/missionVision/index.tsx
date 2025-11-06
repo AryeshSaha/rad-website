@@ -2,7 +2,7 @@
 
 import React from "react";
 import GradientCard from "@/app/about/_components/gradientCard";
-import { missionVisionData } from "@/constants/dummy-data/mission-vision";
+import { missionVisionData } from "@/constants/data/pageData/mission-vision";
 
 const MissionVisionSection = () => {
   return (

@@ -1,5 +1,6 @@
 import { LucideIcon } from "lucide-react";
 import { Variants } from "motion";
+import { ImageProps, StaticImageData } from "next/image";
 import { ReactNode } from "react";
 
 export type NavDropdownProps = {
@@ -27,4 +28,23 @@ export type GradientCardProps = {
   title: string;
   description: string | ReactNode;
   className?: string;
+};
+
+export type ImageTextSectionProps = {
+  image: string | StaticImageData;
+  alt: string;
+  heading: string | ReactNode;
+  body: string | ReactNode;
+  imagePosition?: "left" | "right";
+  aspectRatio?: string;
+  className?: string;
+  imageContainerClassName?: string;
+  textContainerClassName?: string;
+};
+
+export type ResponsiveImageProps = Omit<ImageProps, "width" | "height"> & {
+  aspectRatio?: string; // e.g., 1:1, 16:9, 4:3, etc. and for portrait: 9:16, 3:4, etc.
+  className?: string;
+  containerClassName?: string;
+  overlayClassName?: string;
 };
