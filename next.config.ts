@@ -29,6 +29,14 @@ const nextConfig: NextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
   },
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      config.externals.push({
+        handlebars: "handlebars",
+      });
+    }
+    return config;
+  },
 };
 
 module.exports = nextConfig;

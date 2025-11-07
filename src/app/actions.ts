@@ -9,7 +9,7 @@ import { resolve } from "path";
 export async function submitContactForm(formData: FormData) {
   const transporter = await getTransporter();
   await transporter.verify();
-  const templatePath = resolve("src/constants/templates/notification.html");
+  const templatePath = resolve(process.cwd(), "public/templates/notification.html");  
   const source = await readFile(templatePath, "utf-8");
   const notificationMail = compile(source);
 
