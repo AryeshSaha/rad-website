@@ -1,4 +1,4 @@
-import BlogPreview from "@/app/(sections)/blog-preview";
+// import BlogPreview from "@/app/(sections)/blog-preview";
 import Cta from "@/app/(sections)/cta";
 import Faqs from "@/app/(sections)/faqs";
 import Features from "@/app/(sections)/features";
@@ -29,9 +29,9 @@ export default function Home() {
       <LazyLoad>
         <Testimonials />
       </LazyLoad>
-      <LazyLoad>
+      {/* <LazyLoad>
         <BlogPreview />
-      </LazyLoad>
+      </LazyLoad> */}
       <LazyLoad>
         <Faqs />
       </LazyLoad>

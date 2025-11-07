@@ -455,11 +455,11 @@ export const headerData: NavType[] = [
       },
     ],
   },
-  {
-    key: "blogs",
-    label: "Blogs",
-    href: USER_ROUTES.BLOGS_PREVIEW,
-  },
+  // {
+  //   key: "blogs",
+  //   label: "Blogs",
+  //   href: USER_ROUTES.BLOGS_PREVIEW,
+  // },
   {
     key: "testimonials",
     label: "Testimonials",

@@ -23,7 +23,7 @@ const nextConfig: NextConfig = {
   },
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ["motion", "framer-motion", "@tabler/icons-react"],
+    optimizePackageImports: ["motion"],
     scrollRestoration: false,
   },
   compiler: {

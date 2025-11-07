@@ -40,11 +40,11 @@ export const footerData: {
         name: "About",
         href: USER_ROUTES.ABOUT,
       },
-      {
-        key: "blogs",
-        name: "Blogs",
-        href: USER_ROUTES.BLOGS,
-      },
+      // {
+      //   key: "blogs",
+      //   name: "Blogs",
+      //   href: USER_ROUTES.BLOGS,
+      // },
       {
         key: "work",
         name: "Our Work",

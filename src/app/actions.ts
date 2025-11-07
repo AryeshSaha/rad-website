@@ -13,7 +13,7 @@ export async function submitContactForm(formData: FormData) {
   const source = await readFile(templatePath, "utf-8");
   const notificationMail = compile(source);
 
-  const name = formData.get("fullName")?.toString() || "";
+  const name = formData.get("name")?.toString() || "";
   const email = formData.get("email")?.toString() || "";
   const subject = "Contact Form Submission From Rad Media Solutions Website";
   const message = formData.get("message")?.toString() || "";

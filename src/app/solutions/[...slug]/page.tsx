@@ -1,3 +1,4 @@
+import LazyLoad from "@/components/lazyLoadWrapper";
 import PageTopper from "@/components/pageTopper";
 import { ComponentMap } from "@/lib/component-map";
 import { getSolutionData } from "@/lib/data-loader";
@@ -31,7 +32,13 @@ const Solution = async (props: { params: Promise<{ slug: string[] }> }) => {
 
           return (
             <section key={index} className={`${backgroundColorClass}`}>
-              <Component {...section.data} />
+              {index < 2 ? (
+                <Component {...section.data} />
+              ) : (
+                <LazyLoad>
+                  <Component {...section.data} />
+                </LazyLoad>
+              )}
             </section>
           );
         })}
